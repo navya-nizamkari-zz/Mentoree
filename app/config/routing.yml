@@ -1,0 +1,3 @@
+ment:
+    resource: "@MentBundle/Resources/config/routing.yml"
+    prefix:   /

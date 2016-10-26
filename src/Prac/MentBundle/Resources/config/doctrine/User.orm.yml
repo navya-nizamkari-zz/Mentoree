@@ -1,0 +1,51 @@
+Prac\MentBundle\Entity\User:
+  type: entity
+  table: users
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      type: string
+      length: 255
+      unique: true
+    email_id:
+      type: string
+      length: 255
+    occupation:
+      type: string
+      length: 255
+    company:
+      type: string
+      length: 255
+    intro:
+      type: text
+      length: 255
+      nullable: true    
+    rating:
+      type: integer
+    experience:
+      type: integer
+    github:
+      type: string
+      length: 255
+      unique: true
+    linkedin:
+      type: string
+      length: 255
+      unique: true
+  oneToMany:
+    user_skills:
+      targetEntity: UserSkill
+      mappedBy: users
+  manyToOne:
+    category:
+      targetEntity: Category
+      inversedBy: users
+      joinColumn:
+        name: category_id
+        referencedColumnName: id
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdatedAtValue ]

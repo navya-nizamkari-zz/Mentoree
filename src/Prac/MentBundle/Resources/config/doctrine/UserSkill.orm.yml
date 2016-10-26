@@ -1,0 +1,20 @@
+Prac\MentBundle\Entity\UserSkill:
+  type: entity
+  table: user_skill
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  manyToOne:
+    user:
+      targetEntity: User
+      inversedBy: user_skills
+      joinColumn:
+        name: user_id
+        referencedColumnName: id
+    skill:
+      targetEntity: Skill
+      inversedBy: user_skills
+      joinColumn:
+        name: skill_id
+        referencedColumnName: id

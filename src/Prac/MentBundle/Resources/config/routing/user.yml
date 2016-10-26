@@ -1,0 +1,24 @@
+prac_ment_index:
+    path:     /
+    defaults: { _controller: "MentBundle:User:index" }
+    methods:  GET
+
+prac_ment_show:
+    path:     /{id}/show
+    defaults: { _controller: "MentBundle:User:show" }
+    methods:  GET
+
+prac_ment_new:
+    path:     /new
+    defaults: { _controller: "MentBundle:User:new" }
+    methods:  [GET, POST]
+
+prac_ment_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MentBundle:User:edit" }
+    methods:  [GET, POST]
+
+prac_ment_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MentBundle:User:delete" }
+    methods:  DELETE

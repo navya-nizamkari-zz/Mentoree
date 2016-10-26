@@ -1,0 +1,24 @@
+userskill_index:
+    path:     /
+    defaults: { _controller: "MentBundle:UserSkill:index" }
+    methods:  GET
+
+userskill_show:
+    path:     /{id}/show
+    defaults: { _controller: "MentBundle:UserSkill:show" }
+    methods:  GET
+
+userskill_new:
+    path:     /new
+    defaults: { _controller: "MentBundle:UserSkill:new" }
+    methods:  [GET, POST]
+
+userskill_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MentBundle:UserSkill:edit" }
+    methods:  [GET, POST]
+
+userskill_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MentBundle:UserSkill:delete" }
+    methods:  DELETE

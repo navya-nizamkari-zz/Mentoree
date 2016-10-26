@@ -1,0 +1,19 @@
+ment_prac_ment:
+    resource: "@MentBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+    
+ment_prac_ment2:
+    resource: "@MentBundle/Resources/config/routing/skill.yml"
+    prefix:   /skill
+
+ment_prac_ment3:
+    resource: "@MentBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+ment_prac_ment4:
+    resource: "@MentBundle/Resources/config/routing/userskill.yml"
+    prefix:   /userskill
+
+ment_homepage:
+    path:     /
+    defaults: { _controller: MentBundle:Default:index }

@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>User list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email_id</th>
+                <th>Occupation</th>
+                <th>Company</th>
+                <th>Intro</th>
+                <th>Rating</th>
+                <th>Experience</th>
+                <th>Github</th>
+                <th>Linkedin</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td><a href="{{ path('prac_ment_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.emailid }}</td>
+                <td>{{ user.occupation }}</td>
+                <td>{{ user.company }}</td>
+                <td>{{ user.intro }}</td>
+                <td>{{ user.rating }}</td>
+                <td>{{ user.experience }}</td>
+                <td>{{ user.github }}</td>
+                <td>{{ user.linkedin }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('prac_ment_show', { 'id': user.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('prac_ment_edit', { 'id': user.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('prac_ment_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
