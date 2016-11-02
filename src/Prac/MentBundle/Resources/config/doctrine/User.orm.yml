@@ -1,6 +1,6 @@
 Prac\MentBundle\Entity\User:
   type: entity
-  table: users
+  table: user
   id:
     id:
       type: integer
@@ -38,7 +38,7 @@ Prac\MentBundle\Entity\User:
   oneToMany:
     user_skills:
       targetEntity: UserSkill
-      mappedBy: users
+      mappedBy: user
   manyToOne:
     category:
       targetEntity: Category

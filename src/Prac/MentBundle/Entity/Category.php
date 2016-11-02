@@ -6,6 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Category
+ * 
+ * 
+ * @ORM\Entity(repositoryClass="Prac\MentBundle\Entity\Repository\CategoryRepository")
  */
 class Category
 {
