@@ -1,0 +1,3 @@
+ment:
+    type: rest
+    resource: Prac\MentBundle\Controller\UserController

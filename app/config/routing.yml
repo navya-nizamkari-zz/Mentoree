@@ -1,3 +1,13 @@
 ment:
     resource: "@MentBundle/Resources/config/routing.yml"
     prefix:   /
+    
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix: "/doc"
+
+
+api:
+    type: rest
+    resource: "routing_api.yml"
